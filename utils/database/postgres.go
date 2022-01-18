@@ -10,7 +10,7 @@ import (
 var DB *pgxpool.Pool
 
 func ConnectToDatabase() error {
-	db, err := pgxpool.Connect(context.Background(), os.Getenv("DB_URI"))
+	db, err := pgxpool.Connect(context.Background(), os.Getenv("DATABASE_URL"))
 	if err != nil {
 		return err
 	}
