@@ -6,7 +6,6 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"
-	"github.com/joho/godotenv"
 	"log"
 	"net/http"
 	"os"
@@ -28,10 +27,6 @@ func CreateRoutes() *chi.Mux {
 }
 
 func main() {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error Loading .env File")
-		return
-	}
 	router := CreateRoutes()
 	err := database.ConnectToDatabase()
 	if err != nil {
