@@ -6,7 +6,7 @@ Make requests using any tool, i.e. cURL, Postman, Insomnia, etc.
 
 ## Endpoints:
 
-- Creating inventory:
+- Creating inventory (you don't need the /create but I thought it'd be good to be explicit, although it's not best practice):
 
   `PUT` `https://shopify-challenge-ahmad.herokuapp.com/inventory/create`
 
@@ -33,7 +33,7 @@ Make requests using any tool, i.e. cURL, Postman, Insomnia, etc.
     "reason": string
     ```
 
-- Undo Delete of Inventory:
+- Undo Delete of Inventory (this should not be a DELETE request, oversight...):
 
   `DELETE` `https://shopify-challenge-ahmad.herokuapp.com/inventory/undo-delete/{Item ID}`
 
